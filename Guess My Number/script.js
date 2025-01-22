@@ -5,7 +5,7 @@
 // document.querySelector(".score").textContent = 10;
 
 const secretNumber = Math.trunc(Math.random() * 20 + 1);
-document.querySelector(".number").textContent = secretNumber;
+// document.querySelector(".number").textContent = secretNumber;
 
 let score = 20;
 
@@ -19,6 +19,7 @@ document.querySelector(".check").addEventListener("click", function () {
   } else if (guess === secretNumber) {
     // When there is a win
     document.querySelector(".message").textContent = "Correct Number! You Win!";
+    document.querySelector(".number").textContent = secretNumber;
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
   } else if (guess > secretNumber) {
