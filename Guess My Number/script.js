@@ -4,7 +4,7 @@
 // document.querySelector(".guess").value;
 // document.querySelector(".score").textContent = 10;
 
-const secretNumber = Math.trunc(Math.random() * 20 + 1);
+let secretNumber = Math.trunc(Math.random() * 20 + 1);
 // document.querySelector(".number").textContent = secretNumber;
 
 let score = 20;
@@ -45,4 +45,17 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = score;
     }
   }
+});
+
+// Reset the game
+document.querySelector(".again").addEventListener("click", function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20 + 1);
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".guess").value = "";
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".score").textContent = score;
+  //   document.querySelector(".highscore").textContent = "0";
+  document.querySelector("body").style.backgroundColor = "#222";
+  document.querySelector(".number").style.width = "15rem";
 });
