@@ -40,7 +40,7 @@ document.querySelector(".check").addEventListener("click", function () {
       score--;
       document.querySelector(".score").textContent = score;
     } else {
-      document.querySelector(".message").textContent = "You Lost!";
+      displayMessage("You Lost!");
       score--;
       document.querySelector(".score").textContent = score;
     }
