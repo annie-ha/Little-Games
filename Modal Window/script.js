@@ -26,3 +26,23 @@ const closeModal = function () {
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+// Adding keypress Event "Esc"
+
+document.addEventListener("keydown", function (e) {
+  console.log(e.key); // key is the information from the DOM window
+  if (e.key === "Escape") {
+    // Escape is the value of the key as shown in the DOM window
+    if (!modal.classList.contains("hidden")) {
+      // Before close the modal by pressing ESC, check to see if the modal does not contain the "hidden" class.
+      // if it does not has the "hidden" class, call the closeModal function to add the "hidden" class.
+      closeModal();
+    }
+  }
+});
+
+// Refactoring code
+// if (e.key === "Escape" && !modal.classList.contains("hidden")
+// {
+// closeModal();
+// };
